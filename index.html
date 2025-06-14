@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevMaster Hub | Professional Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/code.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium web development tutorials, expert insights, and advanced coding techniques for professional developers">
+    <meta name="keywords" content="professional web development, advanced coding, software engineering, full-stack development">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="#top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <header class="premium-header">
+        <div class="header-content">
+            <h1><i class="fas fa-code"></i> DevMaster Hub</h1>
+            <p>Advanced Tutorials & Professional Insights in Modern Web Development</p>
+            <div class="theme-switch-wrapper">
+                <span class="theme-label"><i class="fas fa-moon"></i></span>
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="theme-label"><i class="fas fa-sun"></i></span>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <form class="search-form" role="search">
+                    <div class="search-wrapper">
+                        <input 
+                            type="search" 
+                            placeholder="Search..." 
+                            aria-label="Search blog posts"
+                            class="search-input"
+                        >
+                        <button type="submit" class="search-button" aria-label="Submit search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <span class="search-text">Search</span>
+                        </button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <h2>Your Coding Journey Starts Here 🚀</h2>
+            <p>Follow along for tips, tutorials, and stories from a passionate developer.</p>
+        </section>
+
+        <section class="featured-posts">
+            <h2 class="section-title">Featured Articles</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>HTML & CSS for Beginners</h3>
+                    <p>Start your journey with a strong foundation in building web pages.</p>
+                    <div class="card-footer">
+                        <a href="blog.html" class="read-more">Read More</a>
+                        <div class="social-share">
+                            <button aria-label="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                            <button aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Responsive Web Design</h3>
+                    <p>Learn how to build websites that look great on all screen sizes.</p>
+                    <div class="card-footer">
+                        <a href="blog.html" class="read-more">Explore Now</a>
+                        <div class="social-share">
+                            <button aria-label="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                            <button aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>JavaScript Crash Course</h3>
+                    <p>Dive into JavaScript and learn how to make your pages interactive.</p>
+                    <div class="card-footer">
+                        <a href="blog.html" class="read-more">Get Started</a>
+                        <div class="social-share">
+                            <button aria-label="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                            <button aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, React & UI Design tips.</p>
+                    <a href="#" class="category-link">Visit Frontend</a>
+                </article>
+
+                <article class="card">
+                    <h3>Backend</h3>
+                    <p>Node.js, APIs, Databases & server-side logic explained.</p>
+                    <a href="#" class="category-link">Go to Backend</a>
+                </article>
+
+                <article class="card">
+                    <h3>Career & Growth</h3>
+                    <p>How to land a dev job, portfolio tips, and productivity hacks.</p>
+                    <a href="#" class="category-link">Learn More</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <form class="newsletter-form" aria-labelledby="newsletter-heading">
+                <h2 id="newsletter-heading">📬 Join Our Newsletter</h2>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+                <div id="newsletter-error" class="error-message" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Blog — Built with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+/* Color Variables */
+:root {
+    --primary-color: #2d5af7;
+    --secondary-color: #0d1b48;
+    --accent-color: #00d4ff;
+    --text-color: #2a2f45;
+    --bg-color: #ffffff;
+    --card-bg: #f8faff;
+    --hover-color: #1e3fac;
+    --gradient-start: #2d5af7;
+    --gradient-end: #00d4ff;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --primary-color: #4a7bff;
+    --secondary-color: #1a1f3c;
+    --accent-color: #00d4ff;
+    --text-color: #e4e6f0;
+    --bg-color: #0d1117;
+    --card-bg: #171b2d;
+    --hover-color: #668fff;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium Header Styles */
+.premium-header {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg...>');
+    /* Add a subtle pattern */
+    opacity: 0.1;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0077b6;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    padding: 3rem 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Cards with Flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--card-bg);
+    margin-top: 4rem;
+}
+
+/* Form Styling */
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(37, 99, 235, 0.1), transparent);
+}
+
+/* Navigation and Search Styles */
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-form {
+    max-width: 300px;
+    margin: 0;
+    position: relative;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.search-input {
+    width: 200px;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.search-button {
+    height: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+}
+
+/* Theme Switch Styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--accent-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* About Page Styles */
+.about-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    margin-bottom: 3rem;
+}
+
+/* Blog Page Styles */
+.blog-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog-card-header i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Contact Page Styles */
+.premium-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background: var(--bg-color);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-button span {
+        display: none;
+    }
+
+    .search-button {
+        padding: 0.5rem;
+    }
+
+    .search-form {
+        max-width: 100%;
+    }
+
+    .search-text {
+        display: none;
+    }
+
+    .search-button {
+        padding: 0.5rem;
+    }
+
+    .search-wrapper {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}
